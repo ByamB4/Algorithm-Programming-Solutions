@@ -15,26 +15,25 @@ inline void solve() {
     if (mp.find(a[i]) != mp.end())
       mp[a[i]]++;
     else
-			mp[a[i]] = 1;
-		if (mp[a[i]] == 2) {
-			if (a[i] > mx1) {
-				mx2 = mx1;
-				mx1 = a[i];
-			}
-			else if (a[i] > mx2) {
-				mx2 = a[i];
-			}
-			mp[a[i]] = 0;
-		}
-	}
-	if (mx1 == INT_MIN || mx2 == INT_MIN)
-		cout << -1 << '\n';
-	else
-		cout << mx1 * mx2 << '\n';
+      mp[a[i]] = 1;
+    if (mp[a[i]] == 2) {
+      if (a[i] > mx1) {
+        mx2 = mx1;
+        mx1 = a[i];
+      }
+      else if (a[i] > mx2) 
+        mx2 = a[i];
+      mp[a[i]] = 0;
+    }
+  }
+  if (mx1 == INT_MIN || mx2 == INT_MIN)
+    cout << -1 << '\n';
+  else
+    cout << mx1 * mx2 << '\n';
 }
 int main() {
-	int t;
-	cin >> t;
-	while (t--) 
-	  solve();
+  int t;
+  cin >> t;
+  while (t--) 
+    solve();
 }
