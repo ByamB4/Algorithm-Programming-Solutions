@@ -5,16 +5,16 @@ typedef long long int lli;
 using namespace std;
 
 inline void solve() {
-	int n;
-	cin >> n;
-	lli a[n];
-	int mx1 = INT_MIN, mx2 = INT_MIN;
-	unordered_map<int, int> mp;
-	for (int i = 0; i < n; i++) {
-		cin >> a[i];
-		if (mp.find(a[i]) != mp.end())
-			mp[a[i]]++;
-		else
+  int n;
+  cin >> n;
+  lli a[n];
+  int mx1 = INT_MIN, mx2 = INT_MIN;
+  unordered_map<int, int> mp;
+  for (int i = 0; i < n; i++) {
+    cin >> a[i];
+    if (mp.find(a[i]) != mp.end())
+      mp[a[i]]++;
+    else
 			mp[a[i]] = 1;
 		if (mp[a[i]] == 2) {
 			if (a[i] > mx1) {
