@@ -8,4 +8,4 @@ for _ in range(int(input())):
     if c <= k and m <= k: print('both')
     elif c <= k and m > k: print('chef')
     elif m > k and c > k: print('none')
-    else: print('brother')
+    else: print('brother') 
