@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m 'beginner'
+git commit --allow-empty-message -m ''
 git push origin master

@@ -20,16 +20,16 @@ inline void solve() {
   }
   for (int i = n; i >= 1; i--) {
     if (sum % i == 0) {
-      ll needSum = sum / i;
-      ll curSum = 0;
+      ll aSum = sum / i;
+      ll bSum = 0;
       bool ok = true;
       for (int j = 0; j < n; j++) {
-        curSum += a[j];
-        if (curSum > needSum) {
+        bSum += a[j];
+        if (bSum > aSum) {
           ok = false;
           break;
-        } else if (curSum == needSum) {
-          curSum = 0;
+        } else if (bSum == aSum) {
+          bSum = 0;
         }
       }
       if (ok) {
