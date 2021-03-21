@@ -9,16 +9,12 @@ inline int solve() {
 
   cin >> n >> k >> s;
 
-  for (int i = 0; i < n / 2; i++) {
-    if (s[i] != s[n - (i + 1)]) {
-      cout << s[i] << " " << s[n - (i + 1)] << '\n';
-      score += 1;
+  for (int i = 0; i < n / 2; ++i) {
+    if (s[i] != s[n - 1 - i]) {
+      score++;
     }
   }
-  return score;
-  if (score >= k)
-    return 0;
-  else return k - score;
+  return abs(score - k);
 }
 
 int main() {
